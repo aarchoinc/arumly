@@ -1,0 +1,306 @@
+/* ================================= 
+  FONT FAMILIES 
+==================================== */
+$font-stack-Miixoa: "Varela Round", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+$font-stack-Helvetica: Helvetica, sans-serif;
+$font-stack-Helvetica-Neue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-Lucida: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+$font-stack-Metropolis: "Metropolis";
+.poppins {
+  font-family: "Poppins";
+}
+.helvetica {
+  font-family: Helvetica, sans-serif;
+}
+
+/* ================================= 
+  FONT WEIGHT
+==================================== */
+
+.nb {
+  font-weight: normal !important;
+}
+
+.b {
+  font-weight: bold !important;
+}
+
+.bx {
+  font-weight: bolder !important;
+}
+
+.b-100 {
+  font-weight: 100 !important;
+}
+
+.b-200 {
+  font-weight: 200 !important;
+}
+
+.b-300 {
+  font-weight: 300 !important;
+}
+
+.b-400 {
+  font-weight: 400 !important;
+}
+
+.b-500 {
+  font-weight: 500 !important;
+}
+
+.b-600 {
+  font-weight: 600 !important;
+}
+
+.b-700 {
+  font-weight: 700 !important;
+}
+
+.b-800 {
+  font-weight: 800 !important;
+}
+
+.b-900 {
+  font-weight: 900 !important;
+}
+
+.b-lighter {
+  font-weight: 100 !important;
+}
+
+.b-light {
+  font-weight: 300 !important;
+}
+.lighter {
+  font-weight: 100 !important;
+}
+
+.light {
+  font-weight: 300 !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.to-uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.to-lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.text-none {
+  text-transform: none;
+}
+.i {
+  font-style: italic;
+}
+/* ================================= 
+  FONT STYLE
+==================================== */
+
+/* ================================= 
+  FONT SIZE
+==================================== */
+.fs-p1em {
+  font-size: 0.1em !important;
+}
+
+.fs-p2em {
+  font-size: 0.2em !important;
+}
+
+.fs-p3em {
+  font-size: 0.3em !important;
+}
+
+.fs-p4em {
+  font-size: 0.4em !important;
+}
+
+.fs-p5em {
+  font-size: 0.5em !important;
+}
+
+.fs-p6em {
+  font-size: 0.6em !important;
+}
+
+.fs-p7em {
+  font-size: 0.7em !important;
+}
+
+.fs-p8em {
+  font-size: 0.8em !important;
+}
+
+.fs-p9em {
+  font-size: 0.9em !important;
+}
+
+.fs-1em {
+  font-size: 1em !important;
+}
+
+.fs-1p1em {
+  font-size: 1.1em !important;
+}
+
+.fs-1p2em {
+  font-size: 1.2em !important;
+}
+
+.fs-1p3em {
+  font-size: 1.3em !important;
+}
+
+.fs-1p4em {
+  font-size: 1.4em !important;
+}
+
+.fs-1p5em {
+  font-size: 1.5em !important;
+}
+
+.fs-1p6em {
+  font-size: 1.6em !important;
+}
+
+.fs-1p7em {
+  font-size: 1.7em !important;
+}
+
+.fs-1p8em {
+  font-size: 1.8em !important;
+}
+
+.fs-1p9em {
+  font-size: 1.9em !important;
+}
+
+.fs-2em {
+  font-size: 2em !important;
+}
+
+.fs-2p1em {
+  font-size: 2.1em !important;
+}
+
+.fs-2p2em {
+  font-size: 2.2em !important;
+}
+
+.fs-2p3em {
+  font-size: 2.3em !important;
+}
+
+.fs-2p4em {
+  font-size: 2.4em !important;
+}
+
+.fs-2p5em {
+  font-size: 2.5em !important;
+}
+
+.fs-2p6em {
+  font-size: 2.6em !important;
+}
+
+.fs-2p7em {
+  font-size: 2.7em !important;
+}
+
+.fs-2p8em {
+  font-size: 2.8em !important;
+}
+
+.fs-2p9em {
+  font-size: 2.9em !important;
+}
+
+.fs-3em {
+  font-size: 3em !important;
+}
+
+.fs-3p1em {
+  font-size: 3.1em !important;
+}
+
+.fs-3p2em {
+  font-size: 3.2em !important;
+}
+
+.fs-3p3em {
+  font-size: 3.3em !important;
+}
+
+.fs-3p4em {
+  font-size: 3.4em !important;
+}
+
+.fs-3p5em {
+  font-size: 3.5em !important;
+}
+
+.fs-3p6em {
+  font-size: 3.6em !important;
+}
+
+.fs-3p7em {
+  font-size: 3.7em !important;
+}
+
+.fs-3p8em {
+  font-size: 3.8em !important;
+}
+
+.fs-3p9em {
+  font-size: 3.9em !important;
+}
+
+.fs-4em {
+  font-size: 4em !important;
+}
+
+.fs-4p1em {
+  font-size: 4.1em !important;
+}
+
+.fs-4p2em {
+  font-size: 4.2em !important;
+}
+
+.fs-4p3em {
+  font-size: 4.3em !important;
+}
+
+.fs-4p4em {
+  font-size: 4.4em !important;
+}
+
+.fs-4p5em {
+  font-size: 4.5em !important;
+}
+
+.fs-4p6em {
+  font-size: 4.6em !important;
+}
+
+.fs-4p7em {
+  font-size: 4.7em !important;
+}
+
+.fs-4p8em {
+  font-size: 4.8em !important;
+}
+
+.fs-4p9em {
+  font-size: 4.9em !important;
+}

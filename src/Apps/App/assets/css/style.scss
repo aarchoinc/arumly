@@ -1,0 +1,343 @@
+/* =================================
+        LAYOUT | POSITIONING
+==================================== */
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  height: 100%;
+  margin: 0px;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+.grid-x {
+  grid-template-areas: "x x x x x x x x x x x x";
+}
+.x {
+  grid-area: x;
+}
+.x {
+  grid-column: 1 / -1;
+}
+
+.auto {
+  margin: 0 auto;
+}
+
+/* ====== FLEXBOX ====== */
+
+.site_container {
+  /* --- sticky footer --- */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site_content {
+  flex: 1;
+}
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* =================================
+  Base Element Styles
+  ==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section,
+main,
+pre,
+p {
+  display: block;
+}
+
+img,
+.img {
+  max-width: 100% !important;
+  height: auto !important;
+  border: 0px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb:hover {
+  background: #888;
+  border-radius: 3px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+div,
+p,
+pre {
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+}
+pre {
+  white-space: pre-line;
+  font-size: 1em;
+}
+.ow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.ww {
+  word-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+/* =================================
+            BASE COLORS
+==================================== */
+.error {
+  color: #fd2c20 !important;
+}
+.error-bg {
+  background-color: #fd2c20 !important;
+}
+.success {
+  color: #22d213 !important;
+}
+.hold {
+  color: #945cff !important;
+}
+.disabled {
+  color: #57595e !important;
+}
+.yellow {
+  color: yellow !important;
+}
+.neon {
+  color: #c4ff00 !important;
+}
+.neon-bg {
+  background-color: #c4ff00 !important;
+}
+.orange {
+  color: #ff7629 !important;
+}
+
+.orange-bg {
+  background-color: #ff7629 !important;
+}
+
+/* ============================== 
+          BUTTONS 
+  ============================== */
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  background-color: transparent;
+  outline: none;
+  overflow: visible;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  border: none; /* overrides extra padding in Firefox */
+}
+
+button span {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Google Chrome only - fix margins */
+  button span {
+    margin-top: -1px;
+  }
+}
+
+/* ============================== 
+          LINES 
+  ============================== */
+
+.hl-1 {
+  border-bottom: 1px solid #707070 !important;
+  width: 100%;
+}
+.hl-2 {
+  border-bottom: solid 1px rgba(188, 210, 237, 0.3) !important;
+  width: 100%;
+}
+.hl-3 {
+  border-bottom: 1px solid #bebebe !important;
+  width: 100%;
+}
+
+.vl-1 {
+  border-left: 2px solid #bebebe;
+}
+
+.overflow-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.overflow-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+/* width */
+.overflow-x::-webkit-scrollbar,
+.overflow-y::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.overflow-x::-webkit-scrollbar-track,
+.overflow-y::-webkit-scrollbar {
+  background: transparent;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+.overflow-x::-webkit-scrollbar:hover,
+.overflow-y::-webkit-scrollbar:hover {
+  background: #888;
+  border-radius: 10px;
+}
+.overflow-x::-webkit-scrollbar-thumb,
+.overflow-y::-webkit-scrollbar {
+  background: #888;
+  border-radius: 10px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* ==============================
+      CLICKABLES
+  ================================ */
+
+.circular--portrait {
+  display: inline-block;
+  position: relative;
+  width: 85px;
+  height: 85px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+.avatar,
+.default-avatar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  // margin: 0;
+  padding: 0;
+  border-spacing: 0;
+  text-align: center;
+}
+.avatar img {
+  width: 100%;
+  overflow: hidden;
+}
+.default-avatar {
+  border: solid 1px #ffffff;
+}
+/* ==============================
+      #ZZZ	  MEDIA QUERIES
+  ================================ */
+
+@media (min-width: 480px) {
+  h4 {
+    font-size: 1.3em;
+  }
+  /* ~~~~~~ min-width: 480px ~~~~~~ */
+}
+
+@media (min-width: 900px) {
+  h4 {
+    font-size: 1.4em;
+  }
+  /* ~~~~~~ min-width: 900px ~~~~~~ */
+}
+@media (min-width: 1015px) {
+  h4 {
+    font-size: 1.4em;
+  }
+  /* ~~~~~~ min-width: 992px ~~~~~~ */
+}
+@media (min-width: 1200px) {
+  /* ~~~~~~ min-width: 1024px ~~~~~~ */
+}
+@media (min-width: 1280px) {
+  /* ~~~~~~ min-width: 1024px ~~~~~~ */
+}
+
+@media (min-width: 1400px) {
+  h4 {
+    font-size: 1.8em;
+  }
+  /* ~~~~~~ min-width: 1400px ~~~~~~ */
+}
+
+@import "@/Apps/App/assets/css/mixins/mobileMenuButtons";
+@import "@/Apps/App/assets/css/mixins/forms";
+@import "@/Apps/App/assets/css/mixins/btns";
+@import "@/Apps/App/assets/css/mixins/birth-datepicker";
+
+@import "@/Apps/App/assets/css/mtech/font";
+@import "@/Apps/App/assets/css/mtech/layouts";
+@import "@/Apps/App/assets/css/mtech/margin";
+@import "@/Apps/App/assets/css/mtech/padding";
+@import "@/Apps/App/assets/css/mtech/sizing";
+@import "@/Apps/App/assets/css/mtech/styling";
