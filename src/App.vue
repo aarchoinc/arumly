@@ -188,7 +188,7 @@ a:active {
 .side-view,
 .gen-view {
   margin-top: 55px;
-  padding: 20px;
+  // padding: 20px;
 }
 
 @media (min-width: 768px) {
