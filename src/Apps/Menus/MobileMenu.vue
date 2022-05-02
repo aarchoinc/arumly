@@ -3,8 +3,6 @@
     <MobileHeader @showHamburger="showHamburger" />
 
     <nav id="mobile-nav">
-      <div class="hl-3">ss</div>
-
       <Main-MM v-if="mobileMenuStep === 'mm-main'" @step2="step = 2" />
     </nav>
   </div>
@@ -58,8 +56,10 @@ nav {
   left: 0;
   width: 300px;
   height: 100%;
-  background-color: #192844;
+  background-color: #ffffff;
   overflow-y: hidden;
   z-index: 5;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
 }
 </style>

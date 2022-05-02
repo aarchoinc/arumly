@@ -122,6 +122,7 @@ nav {
   a:hover,
   .active {
     text-decoration: underline;
+    font-weight: bold;
   }
 }
 .routes {

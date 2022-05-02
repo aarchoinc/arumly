@@ -8,8 +8,31 @@
       "
       v-bind:class="{ active: isRouteName('home') }"
     >
-      Home
+      HOME
     </div>
+
+    <div
+      class="route pointer"
+      @click="
+        navigateTo('shop');
+        showHamburger();
+      "
+      v-bind:class="{ active: isRouteName('shop') }"
+    >
+      SHOP
+    </div>
+
+    <div
+      class="route pointer"
+      @click="
+        navigateTo('events');
+        showHamburger();
+      "
+      v-bind:class="{ active: isRouteName('events') }"
+    >
+      EVENTS
+    </div>
+
     <div
       class="route pointer"
       @click="
@@ -18,9 +41,20 @@
       "
       v-bind:class="{ active: isRouteName('about') }"
     >
-      About
+      ABOUT
     </div>
 
+    <div
+      class="route pointer"
+      @click="
+        navigateTo('contact');
+        showHamburger();
+      "
+      v-bind:class="{ active: isRouteName('contact') }"
+    >
+      CONTACT
+    </div>
+    <!-- 
     <div>
       <div
         class="route flex flex-jcsb flex-aic pointer"
@@ -35,27 +69,22 @@
           class="icon w-12"
           src="@/Apps/Gen/assets/img/icons/drop-down-white.svg"
         />
-        <!-- <img
-            v-if="hover_1 || mySideStatus"
-            class="icon w-12"
-            src="@/Apps/Gen/assets/img/icons/drop-down-white.svg"
-          /> -->
       </div>
 
       <PushDown class="ml-60" v-show="mySideStatus" />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
 
-import PushDown from "@/Apps/Menus/mobile/push-downs/PushDown.vue";
+// import PushDown from "@/Apps/Menus/mobile/push-downs/PushDown.vue";
 
 export default {
   name: "main-mm",
   components: {
-    PushDown,
+    // PushDown,
   },
   data() {
     return {
@@ -84,14 +113,14 @@ export default {
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     display: flex;
   }
 
   .route:hover,
   .active:hover,
   .active {
-    background-color: #bebebe;
+    background-color: #f9f0f4;
   }
 }
 </style>

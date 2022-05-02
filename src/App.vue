@@ -103,7 +103,7 @@ h6 {
   color: #ffffff !important;
 }
 .tertiary {
-  color: #000000 !important;
+  color: #888888 !important;
 }
 .quaternary {
   color: #00ceff !important;
@@ -113,18 +113,6 @@ h6 {
 }
 .senary {
   color: #232733 !important;
-}
-.septenary {
-  color: #10131a !important;
-}
-.octonary {
-  // color: #2a9cab !important;
-}
-.nonary {
-  // color: #bcd2ed !important;
-}
-.denary {
-  // color: #bcd2ed !important;
 }
 
 .primary-bg {
@@ -145,35 +133,26 @@ h6 {
 .senary-bg {
   background-color: #232733 !important;
 }
-.septenary-bg {
-  background-color: #10131a !important;
-}
-.octonary-bg {
-  // background-color: #2a9cab !important;
-}
-.nonary-bg {
-  // background-color: #00ceff !important;
-}
 
 /* ======= LINKS ======= */
 a:link {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 a:visited {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 a:hover {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 
 a:active {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 }
 .disabled-link {
   color: #57595e !important;

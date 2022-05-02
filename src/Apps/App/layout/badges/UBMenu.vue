@@ -1,13 +1,11 @@
 <template>
-  <div class="dropdown-menu ptb-10" @click="$emit('showUBMenu')">
-    <router-link class="route pointer flex flex-aic" :to="{ name: 'home' }">
-      <!-- <img src="@/Apps/App/assets/img/nav/tracker-white.svg" /> -->
-      <div class="pl-15 fs-1em b">Home</div>
+  <div class="dropdown-menu ptb-10 uppercase" @click="$emit('showUBMenu')">
+    <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
+      <div class="pl-15 fs-1em b">ACCOUNT</div>
     </router-link>
 
-    <router-link class="route pointer flex flex-aic" :to="{ name: 'about' }">
-      <!-- <img src="@/Apps/App/assets/img/nav/tracker-white.svg" /> -->
-      <div class="pl-15 fs-1em b">About</div>
+    <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
+      <div class="pl-15 fs-1em b">LOGOUT</div>
     </router-link>
   </div>
 </template>
@@ -23,18 +21,20 @@ export default {
   position: absolute;
   top: 55px;
   right: 2px;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
-  background-color: #192844;
-  width: 240px;
+  background-color: #ffffff;
+  width: 170px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+  border: 2px solid #000000;
 }
 
 .route {
-  padding: 12px 0px 12px 40px;
+  padding: 12px 0px;
+  padding-left: 35px;
   font-size: 1.1em;
 
   img {
@@ -42,7 +42,7 @@ export default {
   }
 }
 .route:hover {
-  color: #ffffff;
-  background-color: #bebebe;
+  color: #000000;
+  background-color: #f9f0f4;
 }
 </style>

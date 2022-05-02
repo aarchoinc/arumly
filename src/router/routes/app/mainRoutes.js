@@ -9,7 +9,10 @@ import ServerError from "@/Apps/App/layout/errors/ServerError";
 
 // VIEWS
 import Home from "@/Apps/Gen/views/Home.vue";
+const Shop = () => import("@/Apps/Shop/views/Shop.vue");
+const Events = () => import("@/Apps/Events/views/Events.vue");
 const About = () => import("@/Apps/Gen/views/About.vue");
+const Contact = () => import("@/Apps/Gen/views/Contact.vue");
 
 export default [
   {
@@ -57,6 +60,33 @@ export default [
     name: "about",
     components: {
       default: About,
+      "Header-Main": Header,
+      "Footer-Main": FooterPhat,
+    },
+  },
+  {
+    path: "/shop",
+    name: "shop",
+    components: {
+      default: Shop,
+      "Header-Main": Header,
+      "Footer-Main": FooterPhat,
+    },
+  },
+  {
+    path: "/events",
+    name: "events",
+    components: {
+      default: Events,
+      "Header-Main": Header,
+      "Footer-Main": FooterPhat,
+    },
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    components: {
+      default: Contact,
       "Header-Main": Header,
       "Footer-Main": FooterPhat,
     },

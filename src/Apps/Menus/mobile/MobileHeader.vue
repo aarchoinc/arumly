@@ -1,11 +1,8 @@
 <template>
   <div class="sidebar-top flex flex-aic prl-2p">
-    <img
-      src="@/Apps/App/assets/img/general/close-x-white.svg"
-      class="w-16 mr-70 pointer"
-      @click="$emit('showHamburger')"
-    />
-
+    <div class="w-16 mr-70 pointer fs-1p7em" @click="$emit('showHamburger')">
+      X
+    </div>
     <div
       class="fs-1p8em b pointer"
       @click="
@@ -13,7 +10,7 @@
         showHamburger();
       "
     >
-      LOGO
+      Arumly
     </div>
   </div>
 </template>
@@ -36,8 +33,9 @@ export default {
   left: 0px;
   width: 300px;
   height: 55px;
-  background-color: #192844;
+  background-color: #ffffff;
   overflow-y: hidden;
   z-index: 5;
+  border-right: 2px solid #000000;
 }
 </style>
