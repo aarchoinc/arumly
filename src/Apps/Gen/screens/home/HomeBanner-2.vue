@@ -3,9 +3,9 @@
     <div class="fs-1p1em" style="text-align: center; color: #888888">
       WHAT WE’RE ABOUT
     </div>
-    <div class="flex flex-wrap flex-jcsb flex-jcc mt-30">
+    <div class="flex flex-wrap flex-jcsb flex-jcc">
       <BaseItemCard1
-        class="auto"
+        class="auto mt-30"
         v-for="(item, $index) in items.itemCards"
         :item="item"
         :key="$index"

@@ -97,10 +97,10 @@ h6 {
 
 /* ======= BASE COLORS ======= */
 .primary {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 .secondary {
-  color: #bdc0c9 !important;
+  color: #ffffff !important;
 }
 .tertiary {
   color: #000000 !important;
