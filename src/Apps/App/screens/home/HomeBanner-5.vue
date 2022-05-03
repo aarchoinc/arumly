@@ -36,21 +36,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.bgImg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  max-height: 300px;
-  overflow: hidden;
-  display: flex;
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  height: calc(100vh / 2);
-}
-
 .headings {
   font-size: 2.7em;
   font-weight: bold;

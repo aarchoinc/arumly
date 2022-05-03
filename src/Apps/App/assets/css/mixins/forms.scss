@@ -4,12 +4,12 @@ option,
 textarea {
   padding: 8px 10px;
   width: 100%;
-  border: none;
+  border: 1.9px solid #000000;
   border-radius: 1px;
   font-size: 1.1em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  background-color: #414953;
+  color: #000000;
+  background-color: #ffffff;
 }
 input:focus,
 select:focus,
@@ -17,25 +17,12 @@ textarea:focus,
 button:focus {
   outline: none;
 }
-// textarea {
-//   resize: none;
-// }
+
 textarea::-webkit-resizer {
   border-width: 3px;
   border-style: solid;
-  border-color: transparent rgba(188, 210, 237, 0.3) rgba(188, 210, 237, 0.3)
+  border-color: transparent #1b1b1b #1b1b1b
     transparent;
-}
-.input-bg {
-  margin-top: 5px;
-  padding: 5px 15px;
-  width: 100%;
-  border: none;
-  border-radius: 2px;
-  font-size: 1.1em;
-  color: #ffffff;
-  // background-color: #2b323b;
-  background-color: #414953;
 }
 
 label {
@@ -63,15 +50,22 @@ label {
   color: #ffffff;
   background-color: transparent;
 }
+.input-border-bottom {
+  border-top: transparent;
+  border-left: transparent;
+  border-bottom: 1.9px solid #000000;
+  border-right: transparent;
 
+}
 /* ==== Place Holder ==== */
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #bebebe;
+  color: #000000;
   opacity: 1; /* Firefox */
-  font-weight: 500;
+  font-weight: 400;
   // background-color: #2b323b;
+  font-size: .9em;
 }
 
 :-ms-input-placeholder {

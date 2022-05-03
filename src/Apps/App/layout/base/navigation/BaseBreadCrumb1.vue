@@ -1,5 +1,5 @@
 <template>
-  <section class="base-crumbs mt-56 p-18 fs-p9em">
+  <section class="base-crumbs mt-56 ptb-12 prl-18 fs-p9em">
     <div class="route flex ml-15" :class="navClass">
       <router-link class="route mr-10 pointer" :to="{ name: route1 }" exact>{{
         title1
