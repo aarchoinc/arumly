@@ -30,7 +30,7 @@
       <PushDown class="ml-60" v-show="shopStatus" />
     </div>
 
-    <div
+    <!-- <div
       class="route pointer"
       @click="
         navigateTo('events');
@@ -39,7 +39,7 @@
       v-bind:class="{ active: isRouteName('events') }"
     >
       EVENTS
-    </div>
+    </div> -->
 
     <div
       class="route pointer"
@@ -68,7 +68,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
-import PushDown from "@/Apps/App/screens/mobile/ShopPushDown.vue";
+import PushDown from "@/Apps/App/layout/mobile/ShopPushDown.vue";
 
 export default {
   name: "main-mm",

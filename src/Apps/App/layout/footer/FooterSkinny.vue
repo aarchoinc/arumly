@@ -3,9 +3,9 @@
     <div class="flex flex-wrap flex-jcc">
       <router-link class="pointer" :to="{ name: 'home' }"> Home </router-link>
       <router-link class="pointer" :to="{ name: 'shop' }"> Shop </router-link>
-      <router-link class="pointer" :to="{ name: 'events' }">
+      <!-- <router-link class="pointer" :to="{ name: 'events' }">
         Events
-      </router-link>
+      </router-link> -->
       <router-link class="pointer" :to="{ name: 'about' }"> About </router-link>
       <router-link class="pointer" :to="{ name: 'contact' }">
         Contact

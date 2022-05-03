@@ -13,15 +13,14 @@
         route1="home"
         title2="SHOP"
         route2="shop-all-products"
-        title3="EVENTS"
-        route3="events"
         title4="ABOUT"
         route4="about"
         title5="CONTACT"
         route5="contact"
       />
     </div>
-
+    <!-- title3="EVENTS"
+        route3="events" -->
     <div class="middle-hm">
       <router-link
         class="pointer mt-4"

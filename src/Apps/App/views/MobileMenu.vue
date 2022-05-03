@@ -12,8 +12,8 @@
 import { mapState, mapActions } from "vuex";
 
 // Mobile Main
-import MainMM from "@/Apps/App/screens/mobile/Main-MM.vue";
-import MobileHeader from "@/Apps/App/screens/mobile/MobileHeader.vue";
+import MainMM from "@/Apps/App/layout/mobile/Main-MM.vue";
+import MobileHeader from "@/Apps/App/layout/mobile/MobileHeader.vue";
 
 export default {
   name: "sideBar",
