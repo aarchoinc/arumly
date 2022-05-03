@@ -1,6 +1,30 @@
 <template>
   <main class="base-view">
-    <h1>SHOP</h1>
+    <BaseBreadCrumb1
+      title1="HOME"
+      route1="home"
+      title2="SHOP"
+      route2="shop-all-products"
+      :title3="title3Sub"
+      :route3="route3Sub"
+    />
+
+    <div class="p-45">
+      <BaseNavBasic
+        class="header-nav"
+        title1="ALL"
+        route1="shop-all-products"
+        title2="NOTEBOOKS"
+        route2="shop-notebooks"
+        title3="PAPER"
+        route3="shop-paper"
+        title4="WRITING TOOLS"
+        route4="shop-writing-tools"
+        title5="PAINT"
+        route5="shop-paint"
+      />
+      <router-view class="mt-20"></router-view>
+    </div>
   </main>
 </template>
 
@@ -8,6 +32,37 @@
 export default {
   name: "shop-page",
   components: {},
+  data() {
+    return {
+      title3Sub: "",
+      route3Sub: "",
+    };
+  },
+  methods: {
+    subRoute() {
+      const route = this.$route.name;
+      console.log();
+      if (route === "shop-all-products") {
+        this.title3Sub = "ALL";
+        this.route3Sub = "shop-all-products";
+      } else if (route === "shop-notebooks") {
+        this.title3Sub = "NOTEBOOKS";
+        this.route3Sub = "shop-notebooks";
+      } else if (route === "shop-paper") {
+        this.title3Sub = "PAPER";
+        this.route3Sub = "shop-paper";
+      } else if (route === "shop-writing-tools") {
+        this.title3Sub = "WRITING TOOLS";
+        this.route3Sub = "shop-writing-tools";
+      } else if (route === "shop-paint") {
+        this.title3Sub = "PAINT";
+        this.route3Sub = "shop-paint";
+      }
+    },
+  },
+  updated() {
+    this.subRoute();
+  },
 };
 </script>
 

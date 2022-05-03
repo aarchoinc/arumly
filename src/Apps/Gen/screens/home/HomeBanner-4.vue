@@ -18,7 +18,7 @@
       </div>
 
       <div class="mw-250 b3-right">
-        <img src="@/Apps/App/assets/default/default-image.png" />
+        <img src="@/Apps/App/assets/img/arumly/laughing-arumly.jpg" />
       </div>
     </div>
   </section>

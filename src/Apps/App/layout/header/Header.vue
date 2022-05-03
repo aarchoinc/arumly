@@ -12,7 +12,7 @@
         title1="HOME"
         route1="home"
         title2="SHOP"
-        route2="shop"
+        route2="shop-all-products"
         title3="EVENTS"
         route3="events"
         title4="ABOUT"

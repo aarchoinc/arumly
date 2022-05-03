@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import backgroundUrl from "@/Apps/App/assets/default/default-banner-4.jpeg";
+import backgroundUrl from "@/Apps/App/assets/img/arumly/banner-5-arumly.jpg";
 
 export default {
   name: "base-hero-slot-1",

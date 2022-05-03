@@ -1,16 +1,18 @@
 <template>
   <footer class="footer-ss fs-p9em align-c">
     <div class="flex flex-wrap flex-jcc">
-      <router-link class="pointer" :to="{ name: 'about' }"> About </router-link>
-      <router-link class="pointer" :to="{ name: '' }">
-        Terms <span class="mblz-fss">of Use</span>
+      <router-link class="pointer" :to="{ name: 'home' }"> Home </router-link>
+      <router-link class="pointer" :to="{ name: 'shop' }"> Shop </router-link>
+      <router-link class="pointer" :to="{ name: 'events' }">
+        Events
       </router-link>
-      <router-link class="pointer" :to="{ name: '' }">
-        Privacy <span class="mblz-fss"> Policy</span>
+      <router-link class="pointer" :to="{ name: 'about' }"> About </router-link>
+      <router-link class="pointer" :to="{ name: 'contact' }">
+        Contact
       </router-link>
     </div>
 
-    <div class="mt-5">&copy; 2022 COMPANY</div>
+    <div class="mt-5">&copy; 2022 Arumly from Attaom</div>
   </footer>
 </template>
 
@@ -22,7 +24,7 @@ export default {
 
 <style scoped>
 .footer-ss {
-  background: #192844;
+  background: #000000;
   padding: 10px;
   border-top: solid 1px rgba(255, 255, 255, 0.3);
   color: #ffffff;

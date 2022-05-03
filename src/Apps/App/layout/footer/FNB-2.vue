@@ -8,15 +8,12 @@
             <li @click="navigate">Careers</li>
           </router-link>
 
-          <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
+          <router-link :to="{ name: 'about' }" custom v-slot="{ navigate }">
             <li @click="navigate">About</li>
           </router-link>
 
           <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
-            <li @click="navigate">Parent Company</li>
-          </router-link>
-          <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
-            <li @click="navigate">Company News</li>
+            <li @click="navigate">News</li>
           </router-link>
         </ul>
       </div>
@@ -26,26 +23,26 @@
         <div class="title">PRODUCTS</div>
         <ul>
           <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
-            <li @click="navigate">Plans</li>
+            <li @click="navigate">Art Supplies</li>
           </router-link>
 
           <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
-            <li @click="navigate">Add-Ons</li>
+            <li @click="navigate">Paintings</li>
+          </router-link>
+
+          <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
+            <li @click="navigate">Notebooks</li>
           </router-link>
         </ul>
       </div>
       <!--/.links-sec-2-->
 
       <div class="links">
-        <div class="title">SUPPORT</div>
+        <div class="title">HOURS</div>
         <ul>
-          <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
-            <li @click="navigate">Terms</li>
-          </router-link>
-
-          <router-link :to="{ name: '' }" custom v-slot="{ navigate }">
-            <li @click="navigate">Privacy</li>
-          </router-link>
+          <li>Mon - Fri &nbsp; | &nbsp; 9:00a - 5:00p</li>
+          <li>Saturday &nbsp; | &nbsp; 10:00a - 3:00p</li>
+          <li>Sunday &nbsp; <span class="ml-8">|</span> &nbsp; Closed</li>
         </ul>
       </div>
       <!--/.links-sec-3-->

@@ -64,6 +64,7 @@ export default [
       "Footer-Main": FooterPhat,
     },
   },
+
   {
     path: "/shop",
     name: "shop",
@@ -72,7 +73,51 @@ export default [
       "Header-Main": Header,
       "Footer-Main": FooterPhat,
     },
+
+    children: [
+      {
+        path: "",
+        name: "shop-all-products",
+        component: () =>
+          import(
+            /* webpackChunkName: "shop" */ "@/Apps/Shop/components/ShopAllProducts.vue"
+          ),
+      },
+      {
+        path: "notebooks",
+        name: "shop-notebooks",
+        component: () =>
+          import(
+            /* webpackChunkName: "shop" */ "@/Apps/Shop/components/ShopNotebooks.vue"
+          ),
+      },
+      {
+        path: "paper",
+        name: "shop-paper",
+        component: () =>
+          import(
+            /* webpackChunkName: "shop" */ "@/Apps/Shop/components/ShopPaper.vue"
+          ),
+      },
+      {
+        path: "writing-tools",
+        name: "shop-writing-tools",
+        component: () =>
+          import(
+            /* webpackChunkName: "shop" */ "@/Apps/Shop/components/ShopWritingTools.vue"
+          ),
+      },
+      {
+        path: "paint",
+        name: "shop-paint",
+        component: () =>
+          import(
+            /* webpackChunkName: "shop" */ "@/Apps/Shop/components/ShopPaint.vue"
+          ),
+      },
+    ],
   },
+
   {
     path: "/events",
     name: "events",
