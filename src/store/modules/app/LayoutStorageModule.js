@@ -3,17 +3,31 @@
 export const namespaced = true;
 
 const state = {
-  sideStatus: false,
+  shopStatus: false,
 
   mobileMenuStep: "mm-main",
+};
+
+const mutations = {
+  SHOP_STATUS(state) {
+    state.shopStatus = !state.shopStatus;
+  },
+  OPEN_SIDE_STATUS(state) {
+    state.sideStatus = true;
+    state.sideMyGuidesStatus = false;
+  },
+
+  SET_MOBILE_MENU_STEP(state, step) {
+    state.mobileMenuStep = step;
+  },
 };
 
 const getters = {};
 
 const actions = {
   // TOGGLE SIDEBAR
-  toggleSideStatus({ commit }) {
-    commit("SIDE_STATUS");
+  toggleShopStatus({ commit }) {
+    commit("SHOP_STATUS");
   },
 
   // OPEN ONLY
@@ -23,21 +37,6 @@ const actions = {
 
   changeMobileMenuStep({ commit }, payload) {
     commit("SET_MOBILE_MENU_STEP", payload.step);
-  },
-};
-
-const mutations = {
-  SIDE_STATUS(state) {
-    state.sideStatus = !state.sideStatus;
-    state.sideMyGuidesStatus = false;
-  },
-  OPEN_SIDE_STATUS(state) {
-    state.sideStatus = true;
-    state.sideMyGuidesStatus = false;
-  },
-
-  SET_MOBILE_MENU_STEP(state, step) {
-    state.mobileMenuStep = step;
   },
 };
 

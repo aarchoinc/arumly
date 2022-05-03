@@ -8,11 +8,11 @@ import NotAuthorized from "@/Apps/App/layout/errors/NotAuthorized";
 import ServerError from "@/Apps/App/layout/errors/ServerError";
 
 // VIEWS
-import Home from "@/Apps/Gen/views/Home.vue";
+import Home from "@/Apps/App/views/Home.vue";
 const Shop = () => import("@/Apps/Shop/views/Shop.vue");
 const Events = () => import("@/Apps/Events/views/Events.vue");
-const About = () => import("@/Apps/Gen/views/About.vue");
-const Contact = () => import("@/Apps/Gen/views/Contact.vue");
+const About = () => import("@/Apps/App/views/About.vue");
+const Contact = () => import("@/Apps/App/views/Contact.vue");
 
 export default [
   {

@@ -1,21 +1,24 @@
 <template>
-  <div>
+  <section class="p-20">
+    <div class="fs-1p1em" style="text-align: center; color: #888888">
+      WHAT WE’RE ABOUT
+    </div>
     <div class="flex flex-wrap flex-jcsb flex-jcc">
-      <BaseProductCard1
+      <BaseItemCard1
         class="auto mt-30"
-        v-for="(item, $index) in items.all"
+        v-for="(item, $index) in items.itemCards"
         :item="item"
         :key="$index"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import items from "@/data/products.js";
+import items from "@/data/homeBanners.js";
 
 export default {
-  name: "shop-all-products",
+  name: "home-banner-2",
   data() {
     return {
       items,

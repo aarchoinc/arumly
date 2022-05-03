@@ -37,7 +37,7 @@
       <div class="flex flex-aic">
         <div class="cart tertiary flex flex-aic mr-25">
           <div class="w-22 mr-10">
-            <img src="@/Apps/App/assets/img/arumly/arumly-cart.png" />
+            <img src="@/Apps/App/assets/img/icons/arumly-cart.png" />
           </div>
 
           <div>( $50.83 )</div>
@@ -46,7 +46,7 @@
         <div class="liked tertiary flex flex-aic mr-25">
           <img
             class="w-22 mr-10"
-            src="@/Apps/App/assets/img/arumly/arumly-liked.png"
+            src="@/Apps/App/assets/img/icons/arumly-liked.png"
           />
           <span>( 3 )</span>
         </div>
@@ -65,7 +65,7 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
-import MobileMenu from "@/Apps/Menus/MobileMenu.vue";
+import MobileMenu from "@/Apps/App/views/MobileMenu.vue";
 import UBMenu from "@/Apps/App/layout/badges/UBMenu.vue";
 
 export default {

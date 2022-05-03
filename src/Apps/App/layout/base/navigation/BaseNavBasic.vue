@@ -117,8 +117,6 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  display: none;
-
   a:hover,
   .active {
     text-decoration: underline;
@@ -131,12 +129,5 @@ nav {
 }
 .route {
   margin-right: 30px;
-}
-
-@media (min-width: 1015px) {
-  nav {
-    display: inline;
-  }
-  /* ~~~~~~ min-width: 480px ~~~~~~ */
 }
 </style>

@@ -2,7 +2,7 @@
   <footer class="footer">
     <!-- <Maling-List-Basic-1 class="auto pt-15 prl-5p" id="mailing" /> -->
     <FNB2 class="pt-15 prl-5p auto" />
-    <FooterSkinny class="mt-35" />
+    <FooterSkinny class="mt-20" />
   </footer>
 </template>
 

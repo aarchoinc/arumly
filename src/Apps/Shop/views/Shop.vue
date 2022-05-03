@@ -12,6 +12,7 @@
     <div class="p-45">
       <BaseNavBasic
         class="header-nav"
+        navClass="header-nav"
         title1="ALL"
         route1="shop-all-products"
         title2="NOTEBOOKS"
@@ -23,7 +24,7 @@
         title5="PAINT"
         route5="shop-paint"
       />
-      <router-view class="mt-20"></router-view>
+      <router-view class="shop-views mt-20 auto"></router-view>
     </div>
   </main>
 </template>
@@ -66,4 +67,18 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.shop-views {
+  max-width: 999px;
+}
+.header-nav {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .header-nav {
+    display: inline;
+  }
+  /* ~~~~~~ min-width: 480px ~~~~~~ */
+}
+</style>

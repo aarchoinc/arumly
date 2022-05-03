@@ -43,6 +43,20 @@
           <li>Mon - Fri &nbsp; | &nbsp; 9:00a - 5:00p</li>
           <li>Saturday &nbsp; | &nbsp; 10:00a - 3:00p</li>
           <li>Sunday &nbsp; <span class="ml-8">|</span> &nbsp; Closed</li>
+          <li class="mt-15 flex">
+            <img
+              class="w-35 mr-20"
+              src="@/Apps/App/assets/img/icons/arumly-twitter.png"
+            />
+            <img
+              class="w-35 mr-20"
+              src="@/Apps/App/assets/img/icons/facebook-arumly.png"
+            />
+            <img
+              class="w-35"
+              src="@/Apps/App/assets/img/icons/instagram-arumly.png"
+            />
+          </li>
         </ul>
       </div>
       <!--/.links-sec-3-->
