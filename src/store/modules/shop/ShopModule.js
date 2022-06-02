@@ -46,6 +46,15 @@ const actions = {
     );
     commit("SET_PRODUCTS_BY_TAGS", data);
   },
+
+  async addObjToCart({ commit }, payload) {
+    // const query = router.app.$route.query;
+
+    const { data } = await api.get(
+      `/arumly/shop/cart/add-object/{${payload.id}}`
+    );
+    commit("SET_PRODUCTS_BY_TAGS", data);
+  },
 };
 
 export default {

@@ -30,7 +30,7 @@
       <PushDown class="ml-60" v-show="shopStatus" />
     </div>
 
-    <!-- <div
+    <div
       class="route pointer"
       @click="
         navigateTo('events');
@@ -39,7 +39,7 @@
       v-bind:class="{ active: isRouteName('events') }"
     >
       EVENTS
-    </div> -->
+    </div>
 
     <div
       class="route pointer"

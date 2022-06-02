@@ -3,7 +3,7 @@
     <div
       class="route pointer"
       @click="
-        navigateTo('shop-all-products');
+        navigateToParam('shop-all-products', { limit: 20 });
         showHamburger();
       "
       v-bind:class="{ active: isRouteName('shop-all-products') }"

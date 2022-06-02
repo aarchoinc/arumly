@@ -5,11 +5,12 @@ import FooterPhat from "@/Apps/App/layout/footer/FooterPhat.vue";
 // VIEWS
 const Shop = () => import("@/Apps/Shop/views/Shop.vue");
 const Events = () => import("@/Apps/Events/views/Events.vue");
+const Checkout = () => import("@/Apps/Checkout/views/Checkout.vue");
+const Cart = () => import("@/Apps/Checkout/views/Cart.vue");
 
 export default [
   {
     path: "/shop",
-    name: "shop",
     components: {
       default: Shop,
       "Header-Main": Header,
@@ -68,5 +69,45 @@ export default [
       "Header-Main": Header,
       "Footer-Main": FooterPhat,
     },
+  },
+
+  {
+    path: "/cart",
+    components: {
+      default: Cart,
+      "Header-Main": Header,
+      "Footer-Main": FooterPhat,
+    },
+
+    children: [
+      {
+        path: "",
+        name: "cart",
+        component: () =>
+          import(
+            /* webpackChunkName: "cart" */ "@/Apps/Checkout/views/Checkout.vue"
+          ),
+      },
+    ],
+  },
+
+  {
+    path: "/checkout",
+    components: {
+      default: Checkout,
+      "Header-Main": Header,
+      "Footer-Main": FooterPhat,
+    },
+
+    children: [
+      {
+        path: "",
+        name: "checkout",
+        component: () =>
+          import(
+            /* webpackChunkName: "cart" */ "@/Apps/Checkout/views/Checkout.vue"
+          ),
+      },
+    ],
   },
 ];

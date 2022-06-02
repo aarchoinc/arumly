@@ -2,7 +2,12 @@
   <footer class="footer-ss fs-p9em align-c">
     <div class="flex flex-wrap flex-jcc">
       <router-link class="pointer" :to="{ name: 'home' }"> Home </router-link>
-      <router-link class="pointer" :to="{ name: 'shop' }"> Shop </router-link>
+      <router-link
+        class="pointer"
+        :to="{ name: 'shop-all-products', query: { limit: 50 } }"
+      >
+        Shop
+      </router-link>
       <!-- <router-link class="pointer" :to="{ name: 'events' }">
         Events
       </router-link> -->
@@ -12,7 +17,7 @@
       </router-link>
     </div>
 
-    <div class="mt-5">&copy; 2022 Arumly from Attaom</div>
+    <div class="mt-5">&copy; 2022 Arumly from Aarcho</div>
   </footer>
 </template>
 
