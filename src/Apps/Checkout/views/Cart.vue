@@ -43,7 +43,8 @@
 
           <div class="flex flex-jcsb mt-40">
             <div>SUBTOTAL</div>
-            <div class="tertiary">${{ totalSum() }}</div>
+            <!-- <div class="tertiary">${{ totalSum() }}</div> -->
+            <div class="tertiary">${{ cartTotal }}</div>
           </div>
 
           <div class="flex flex-jcsb mt-20">
@@ -55,7 +56,8 @@
 
           <div class="flex flex-jcsb mt-25">
             <div class="b">TOTAL</div>
-            <div class="tertiary">${{ totalSum() }}</div>
+            <!-- <div class="tertiary">${{ totalSum() }}</div> -->
+            <div class="tertiary">${{ cartTotal }}</div>
           </div>
 
           <div class="mt-40">
@@ -84,12 +86,14 @@ export default {
   computed: {
     ...mapState({
       items: (state) => state.CheckoutModule.cartItems,
+      cartTotal: (state) => state.CheckoutModule.cartTotal.total,
     }),
   },
 
   methods: {
     fetch() {
       this.$store.dispatch("fetchCartItems");
+      this.$store.dispatch("fetchCartTotal");
     },
     removeItem(item) {
       this.$store.dispatch("removeCartItem", {
@@ -111,7 +115,7 @@ export default {
 
   created() {
     this.fetch();
-    this.totalSum();
+    // this.totalSum();
   },
 };
 </script>

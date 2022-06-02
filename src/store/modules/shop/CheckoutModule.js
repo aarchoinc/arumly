@@ -5,6 +5,8 @@ export const namespaced = true;
 
 const state = {
   cartItems: [],
+  cartTotal: {},
+
   productsByTags: [],
   product: {},
 };
@@ -13,6 +15,10 @@ const mutations = {
   SET_CART_ITEMS(state, cartItems) {
     state.cartItems = cartItems;
   },
+  SET_CART_TOTAL(state, cartTotal) {
+    state.cartTotal = cartTotal;
+  },
+
   SET_PRODUCT_BY_ID(state, product) {
     state.product = product;
   },
@@ -31,6 +37,11 @@ const actions = {
     commit("SET_CART_ITEMS", data);
   },
 
+  async fetchCartTotal({ commit }) {
+    const { data } = await api.get(`/arumly/checkout/cart/cart-total`);
+    commit("SET_CART_TOTAL", data[0]);
+  },
+
   addCartItem({ dispatch }, payload) {
     api
       .post(`/arumly/checkout/cart/create/cart-item`, {
@@ -38,9 +49,7 @@ const actions = {
       })
       .then(() => {
         dispatch("fetchCartItems");
-        // setTimeout(function() {
-        //   location.reload();
-        // }, 500);
+        dispatch("fetchCartTotal");
       })
       .catch((error) => {
         const notification = {
@@ -58,9 +67,7 @@ const actions = {
       .delete(`/arumly/checkout/cart/delete/cart-item/${payload.id}`)
       .then(() => {
         dispatch("fetchCartItems");
-        // setTimeout(function() {
-        //   location.reload();
-        // }, 500);
+        dispatch("fetchCartTotal");
       })
       .catch((error) => {
         const notification = {

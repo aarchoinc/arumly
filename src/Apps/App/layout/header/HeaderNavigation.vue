@@ -13,9 +13,9 @@
         SHOP
       </router-link>
 
-      <router-link class="route pointer" :to="{ name: 'events' }" exact>
+      <!-- <router-link class="route pointer" :to="{ name: 'events' }" exact>
         EVENTS
-      </router-link>
+      </router-link> -->
 
       <router-link class="route pointer" :to="{ name: 'about' }" exact>
         ABOUT

@@ -38,7 +38,8 @@
         <img src="@/Apps/App/assets/img/arumly/thread-arumly.jpg" alt="img" />
         <div class="mt-10 b">LEARN WITH US.</div>
 
-        <div @click="navigateToParam('events')">
+        <!-- <div @click="navigateToParam('events')"> -->
+        <div>
           <BaseBtn
             class="btz -fill-1 pointer fs-1p1em b-500 mt-10 ptb-10 prl-20 w-100p"
           >
