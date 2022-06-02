@@ -8,6 +8,7 @@ import Emails from "./modules/app/EmailsModule";
 import LayoutStorageModule from "./modules/app/LayoutStorageModule";
 
 import ShopModule from "@/store/modules/shop/ShopModule.js";
+import CheckoutModule from "@/store/modules/shop/CheckoutModule.js";
 
 import createPersistedState from "vuex-persistedstate";
 
@@ -28,5 +29,6 @@ export default new Vuex.Store({
     Emails,
     LayoutStorageModule,
     ShopModule,
+    CheckoutModule,
   },
 });

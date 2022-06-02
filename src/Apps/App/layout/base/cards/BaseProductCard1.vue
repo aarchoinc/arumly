@@ -12,6 +12,12 @@
         src="@/Apps/App/assets/img/rating/rating-3.5.png"
       />
     </div>
+
+    <div @click="addToCart(item)">
+      <BaseBtn class="btz -fill-1 pointer fs-p9em b mt-5 ptb-10 prl-20 w-100p">
+        ADD TO CART
+      </BaseBtn>
+    </div>
   </div>
 </template>
 
@@ -21,6 +27,14 @@ export default {
   props: {
     item: {
       type: Object,
+    },
+  },
+  methods: {
+    addToCart(item) {
+      this.$store.dispatch("addCartItem", {
+        obj_uid: item.obj_uid,
+      });
+      this.$router.push({ name: "cart" });
     },
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <main class="base-view">
+  <main class="base-view pb-90">
     <BaseBreadCrumb1
       title1="HOME"
       route1="home"
@@ -34,7 +34,6 @@ export default {
   methods: {
     subRoute() {
       const route = this.$route.name;
-      console.log();
       if (route === "shop-all-products") {
         this.title3Sub = "ALL";
         this.route3Sub = "shop-all-products";

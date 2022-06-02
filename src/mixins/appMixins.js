@@ -42,6 +42,12 @@ export const methodsComputed = {
     stripTags(text) {
       return text.replace(/(<([^>]+)>)/gi, "");
     },
+
+    addToCart(item) {
+      this.$store.dispatch("addObjToCart", {
+        id: item.id,
+      });
+    },
   },
 };
 
@@ -59,6 +65,11 @@ export const routing = {
     navigateTo(routeName) {
       if (this.$route.name !== routeName) {
         this.$router.push({ name: routeName });
+      }
+    },
+    navigateToParam(routeName, q) {
+      if (this.$route.name !== routeName) {
+        this.$router.push({ name: routeName, query: q });
       }
     },
 

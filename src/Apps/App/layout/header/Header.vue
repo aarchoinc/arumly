@@ -7,17 +7,7 @@
         <div class="bar mt-5"></div>
       </div>
 
-      <BaseNavBasic
-        class="header-nav fs-p8em"
-        title1="HOME"
-        route1="home"
-        title2="SHOP"
-        route2="shop-all-products"
-        title4="ABOUT"
-        route4="about"
-        title5="CONTACT"
-        route5="contact"
-      />
+      <HeaderNavigation class="header-nav fs-p8em" />
     </div>
     <!-- title3="EVENTS"
         route3="events" -->
@@ -34,26 +24,30 @@
 
     <div class="right-hm">
       <div class="flex flex-aic">
-        <div class="cart tertiary flex flex-aic mr-25">
-          <div class="w-22 mr-10">
+        <div
+          class="cart tertiary flex flex-aic mr-18 pointer"
+          @click="navigateTo('cart')"
+        >
+          <div class="w-22 mr-6">
             <img src="@/Apps/App/assets/img/icons/arumly-cart.png" />
           </div>
 
-          <div>( $50.83 )</div>
+          <div>( {{ items.length }} )</div>
         </div>
 
-        <div class="liked tertiary flex flex-aic mr-25">
+        <!-- <div class="liked tertiary flex flex-aic mr-25">
           <img
             class="w-22 mr-10"
             src="@/Apps/App/assets/img/icons/arumly-liked.png"
           />
           <span>( 3 )</span>
-        </div>
+        </div> -->
 
         <div class="account pointer b" @click="ubMenu = !ubMenu">
-          <span class="hi">HI,</span> GUEST
+          <i class="fa-solid fa-user fa-lg"></i>
         </div>
       </div>
+
       <UBMenu v-if="ubMenu" @showUBMenu="ubMenu = !ubMenu" />
     </div>
 
@@ -66,12 +60,14 @@ import { mapState, mapActions } from "vuex";
 
 import MobileMenu from "@/Apps/App/views/MobileMenu.vue";
 import UBMenu from "@/Apps/App/layout/badges/UBMenu.vue";
+import HeaderNavigation from "@/Apps/App/layout/header/HeaderNavigation.vue";
 
 export default {
   name: "main-header",
   components: {
     MobileMenu,
     UBMenu,
+    HeaderNavigation,
   },
   data() {
     return {
@@ -82,10 +78,18 @@ export default {
   computed: {
     ...mapState({
       hamburgerStatus: (state) => state.AppModule.hamburgerStatus,
+      items: (state) => state.CheckoutModule.cartItems,
     }),
   },
   methods: {
     ...mapActions(["showHamburger"]),
+    fetch() {
+      this.$store.dispatch("fetchCartItems");
+    },
+  },
+
+  created() {
+    this.fetch();
   },
 };
 </script>

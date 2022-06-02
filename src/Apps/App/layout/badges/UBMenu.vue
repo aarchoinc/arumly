@@ -1,18 +1,40 @@
 <template>
   <div class="dropdown-menu ptb-10 uppercase" @click="$emit('showUBMenu')">
     <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
-      <div class="pl-15 fs-1em b">ACCOUNT</div>
+      <div class="fs-1em b">ACCOUNT</div>
+    </router-link>
+
+    <router-link class="route pointer flex flex-aic" :to="{ name: 'cart' }">
+      <div class="fs-1em b">
+        CHECKOUT <span>( {{ items.length }} )</span>
+      </div>
     </router-link>
 
     <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
-      <div class="pl-15 fs-1em b">LOGOUT</div>
+      <div class="fs-1em b">LOGOUT</div>
     </router-link>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "UB-Menu",
+  computed: {
+    ...mapState({
+      items: (state) => state.CheckoutModule.cartItems,
+    }),
+  },
+  methods: {
+    fetch() {
+      this.$store.dispatch("fetchCartItems");
+    },
+  },
+
+  created() {
+    this.fetch();
+  },
 };
 </script>
 
