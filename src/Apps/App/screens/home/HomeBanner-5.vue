@@ -37,17 +37,20 @@ export default {
 
 <style lang="scss" scoped>
 .headings {
-  font-size: 2.7em;
+  font-size: 1.7em;
   font-weight: bold;
 }
 
 @media (min-width: 480px) {
+  .headings {
+    font-size: 2.4em;
+  }
 }
 @media (min-width: 600px) {
 }
 @media (min-width: 768px) {
-}
-
-@media (min-width: 900px) {
+  .headings {
+    font-size: 2.7em;
+  }
 }
 </style>

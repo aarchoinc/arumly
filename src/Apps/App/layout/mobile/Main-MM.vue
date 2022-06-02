@@ -21,10 +21,10 @@
       >
         <div>SHOP</div>
 
-        <!-- <img
+        <img
           class="icon w-12"
-          src="@/Apps/Gen/assets/img/icons/drop-down-white.svg"
-        /> -->
+          src="@/Apps/App/assets/img/general/dropdown-nav.png"
+        />
       </div>
 
       <PushDown class="ml-60" v-show="shopStatus" />

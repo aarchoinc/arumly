@@ -9,11 +9,11 @@
       :route3="route3Sub"
     />
 
-    <div class="p-45">
+    <section>
       <ShopNavigation class="header-nav" />
 
-      <router-view class="shop-views mt-20 auto"></router-view>
-    </div>
+      <router-view class="shop-views auto"></router-view>
+    </section>
   </main>
 </template>
 
@@ -61,5 +61,14 @@ export default {
 <style lang="scss" scoped>
 .shop-views {
   max-width: 999px;
+}
+section {
+  padding: 15px;
+}
+
+@media (min-width: 600px) {
+  section {
+    padding: 45px;
+  }
 }
 </style>

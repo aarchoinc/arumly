@@ -4,7 +4,7 @@
       WHAT WE’RE ABOUT
     </div>
 
-    <div class="flex flex-wrap flex-jcsb flex-jcc auto">
+    <div class="flex flex-wrap flex-jcsa flex-jcc auto">
       <div class="cards mw-260 mt-30">
         <img
           src="@/Apps/App/assets/img/products/paint-brush-arumly.jpg"

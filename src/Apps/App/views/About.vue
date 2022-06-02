@@ -6,7 +6,7 @@
       title2="ABOUT"
       route2="about"
     />
-    <div class="p-45 align-c mw-1000 auto">
+    <section class="align-c mw-1000 auto">
       <h1>ABOUT US</h1>
 
       <section
@@ -25,7 +25,7 @@
 
       <h2 class="mt-30">Lorem ipsum dolor sit.</h2>
 
-      <p class="mt-30 tertiary align-l lh-2p5">
+      <p class="mt-30 tertiary align-l">
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
         voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -37,7 +37,7 @@
         ipsum dolor sit amet.
       </p>
 
-      <p class="mt-20 tertiary align-l lh-2p5">
+      <p class="mt-20 tertiary align-l">
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
         voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -48,7 +48,7 @@
         rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
         ipsum dolor sit amet.
       </p>
-    </div>
+    </section>
   </main>
 </template>
 
@@ -69,5 +69,17 @@ export default {
 <style lang="scss" scoped>
 .bgImg {
   max-height: 330px;
+}
+
+section {
+  padding: 15px;
+  line-height: 2.2;
+}
+
+@media (min-width: 600px) {
+  section {
+    padding: 45px;
+    line-height: 2.5;
+  }
 }
 </style>

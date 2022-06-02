@@ -49,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 .b3-right {
   margin-top: 20px;
-  margin-left: -20px;
+  // margin-left: -20px;
 }
 
 @media (min-width: 866px) {
