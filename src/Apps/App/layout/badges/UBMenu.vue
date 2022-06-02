@@ -5,7 +5,9 @@
     </router-link>
 
     <router-link class="route pointer flex flex-aic" :to="{ name: 'cart' }">
-      <div class="fs-1em b">CHECKOUT ( 3 )</div>
+      <div class="fs-1em b">
+        CHECKOUT <span>( {{ items.length }} )</span>
+      </div>
     </router-link>
 
     <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
@@ -15,8 +17,24 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "UB-Menu",
+  computed: {
+    ...mapState({
+      items: (state) => state.CheckoutModule.cartItems,
+    }),
+  },
+  methods: {
+    fetch() {
+      this.$store.dispatch("fetchCartItems");
+    },
+  },
+
+  created() {
+    this.fetch();
+  },
 };
 </script>
 

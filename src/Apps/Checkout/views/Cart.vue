@@ -37,7 +37,36 @@
         </template>
       </div>
 
-      <div class="cart-right mt-25">RIGHT</div>
+      <div class="cart-right mt-25">
+        <div class="summary p-25">
+          <div class="b fs-1p1em">ORDER SUMMARY</div>
+
+          <div class="flex flex-jcsb mt-40">
+            <div>SUBTOTAL</div>
+            <div class="tertiary">${{ totalSum() }}</div>
+          </div>
+
+          <div class="flex flex-jcsb mt-20">
+            <div>SHIPPING</div>
+            <div class="tertiary">Calculated at next step</div>
+          </div>
+
+          <div class="hl-4 mt-25"></div>
+
+          <div class="flex flex-jcsb mt-25">
+            <div class="b">TOTAL</div>
+            <div class="tertiary">${{ totalSum() }}</div>
+          </div>
+
+          <div class="mt-40">
+            <BaseBtn
+              class="btz -fill-1 pointer fs-p9em b mt-5 ptb-10 prl-20 w-100p"
+            >
+              CONTINUE TO CHECKOUT
+            </BaseBtn>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -67,10 +96,22 @@ export default {
         id: item.id,
       });
     },
+
+    totalSum() {
+      let prices = [];
+
+      this.items.forEach((item) => {
+        var num = parseFloat(item.pricing_price);
+        prices.push(num);
+      });
+
+      return prices.reduce((a, b) => a + b, 0).toFixed(2);
+    },
   },
 
   created() {
     this.fetch();
+    this.totalSum();
   },
 };
 </script>
@@ -94,5 +135,12 @@ export default {
   padding: 15px;
   border-radius: 5px;
   max-width: 320px;
+}
+.summary {
+  background-color: #f9f0f4;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 400px;
+  min-height: 200px;
 }
 </style>
