@@ -7,6 +7,8 @@ import NotificationModule from "./modules/app/NotificationModule";
 import Emails from "./modules/app/EmailsModule";
 import LayoutStorageModule from "./modules/app/LayoutStorageModule";
 
+import ShopModule from "@/store/modules/shop/ShopModule.js";
+
 import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex);
@@ -15,7 +17,7 @@ export default new Vuex.Store({
   plugins: [
     createPersistedState({
       key: "usx",
-      paths: ["appModule", "Auth.idToken", "Auth.loggedInUser"],
+      paths: ["appModule", "Auth.idToken", "Auth.loggedInUser", "ShopModule"],
     }),
   ],
 
@@ -25,5 +27,6 @@ export default new Vuex.Store({
     NotificationModule,
     Emails,
     LayoutStorageModule,
+    ShopModule,
   },
 });

@@ -4,8 +4,8 @@ import { mapState, mapGetters } from "vuex";
 export const baseUrl = {
   computed: {
     ...mapState({
-      baseUrl: (state) => state.appModule.apiUrl,
-      baseFileUrl: (state) => state.appModule.apiFileUrl,
+      baseUrl: (state) => state.AppModule.apiUrl,
+      baseFileUrl: (state) => state.AppModule.apiFileUrl,
     }),
   },
 };

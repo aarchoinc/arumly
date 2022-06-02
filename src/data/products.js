@@ -10,33 +10,33 @@ const all = [
     price: "$15",
   },
   {
-    thumbnail: require("@/Apps/App/assets/img/products/books-arumly.jpg"),
-    title: "LEARN WITH US.",
+    thumbnail: require("@/Apps/App/assets/img/products/canvases-arumly.jpg"),
+    title: "CANVASES",
     price: "$15",
   },
   {
     thumbnail: require("@/Apps/App/assets/img/products/journal-arumly.jpg"),
-    title: "LEARN WITH US.",
+    title: "PINK JOURNAL",
     price: "$15",
   },
   {
     thumbnail: require("@/Apps/App/assets/img/arumly/notebook-arumly.jpg"),
-    title: "LEARN WITH US.",
+    title: "SPIRAL NOTEBOOK",
     price: "$15",
   },
   {
     thumbnail: require("@/Apps/App/assets/img/products/swatches-arumly.jpg"),
-    title: "LEARN WITH US.",
+    title: "SWATCH PALLETS",
     price: "$15",
   },
   {
     thumbnail: require("@/Apps/App/assets/img/products/pencils-arumly.jpg"),
-    title: "LEARN WITH US.",
+    title: "COLOR PENCILS",
     price: "$15",
   },
   {
     thumbnail: require("@/Apps/App/assets/img/arumly/paint-brush-arumly.jpg"),
-    title: "LEARN WITH US.",
+    title: "PAINTING OF IMAGE",
     price: "$15",
   },
 ];

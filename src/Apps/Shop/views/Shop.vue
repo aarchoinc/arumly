@@ -10,29 +10,21 @@
     />
 
     <div class="p-45">
-      <BaseNavBasic
-        class="header-nav"
-        navClass="header-nav"
-        title1="ALL"
-        route1="shop-all-products"
-        title2="NOTEBOOKS"
-        route2="shop-notebooks"
-        title3="PAPER"
-        route3="shop-paper"
-        title4="WRITING TOOLS"
-        route4="shop-writing-tools"
-        title5="PAINT"
-        route5="shop-paint"
-      />
+      <ShopNavigation class="header-nav" />
+
       <router-view class="shop-views mt-20 auto"></router-view>
     </div>
   </main>
 </template>
 
 <script>
+import ShopNavigation from "@/Apps/Shop/layout/ShopNavigation.vue";
+
 export default {
   name: "shop-page",
-  components: {},
+  components: {
+    ShopNavigation,
+  },
   data() {
     return {
       title3Sub: "",
@@ -70,15 +62,5 @@ export default {
 <style lang="scss" scoped>
 .shop-views {
   max-width: 999px;
-}
-.header-nav {
-  display: none;
-}
-
-@media (min-width: 600px) {
-  .header-nav {
-    display: inline;
-  }
-  /* ~~~~~~ min-width: 480px ~~~~~~ */
 }
 </style>

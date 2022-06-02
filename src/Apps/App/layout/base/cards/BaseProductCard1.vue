@@ -1,10 +1,10 @@
 <template>
   <div class="item-cards pointer">
     <div class="cards mw-200">
-      <img :src="item.thumbnail" alt="img" />
+      <img :src="baseFileUrl + item.thumbnail" alt="img" />
       <div class="flex flex-jcsb">
-        <div class="mt-10 fs-p9em">{{ item.title }}</div>
-        <div class="mt-10 tertiary">$15</div>
+        <div class="mt-10 fs-p9em">{{ item.title }} {{ item.obj_name }}</div>
+        <div class="mt-10 tertiary">${{ item.pricing_price }}</div>
       </div>
 
       <img

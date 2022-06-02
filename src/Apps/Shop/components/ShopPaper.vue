@@ -1,12 +1,44 @@
 <template>
   <div>
-    <h1>PAPER</h1>
+    <div class="flex flex-wrap flex-jcsb flex-jcc">
+      <BaseProductCard1
+        class="auto mt-30"
+        v-for="(item, $index) in products"
+        :item="item"
+        :key="$index"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "shop-paper",
+
+  computed: {
+    ...mapState({
+      products: (state) => state.ShopModule.productsByTags,
+    }),
+  },
+
+  methods: {
+    fetch() {
+      this.$store.dispatch("fetchProductsByTags", {
+        obj_tags: "paper",
+      });
+    },
+  },
+
+  watch: {
+    $route() {
+      this.fetch();
+    },
+  },
+  created() {
+    this.fetch();
+  },
 };
 </script>
 
