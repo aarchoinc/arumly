@@ -6,7 +6,7 @@ if (NODE_ENV === "development") {
   var devUrl = "http://127.0.0.1:3002/api/v1";
 }
 if (NODE_ENV === "production") {
-  var prodUrl = "https://api.aarcho.com/api/v1";
+  var prodUrl = "https://projects-api.aarcho.com/api/v1";
 }
 
 // const token = localStorage.getItem("idToken");
