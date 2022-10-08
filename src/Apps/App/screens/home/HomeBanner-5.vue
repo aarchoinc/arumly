@@ -1,11 +1,11 @@
 <template>
   <section
-    class="bgImg"
+    class="bgImg flex flex-jcc"
     :style="{
       backgroundImage: `url(${backgroundUrl})`,
     }"
   >
-    <div class="flex flex-fdc flex-jcc auto secondary">
+    <div class="secondary p-50">
       <div class="headings">
         ACTION INSPIRES
         <br />

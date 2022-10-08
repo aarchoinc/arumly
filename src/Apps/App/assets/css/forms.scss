@@ -87,6 +87,14 @@ button:focus {
   outline: none;
 }
 
+.input-underline {
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #000000;
+}
+
 /* =================================== 
 		SELECT BUTTONS 
 ====================================== */

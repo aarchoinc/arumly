@@ -3,6 +3,7 @@ import Vuex from "vuex";
 
 import AppModule from "./modules/app/AppModule";
 import Auth from "./modules/app/AuthModule";
+import AccountModule from "./modules/app/AccountModule";
 import NotificationModule from "./modules/app/NotificationModule";
 import Emails from "./modules/app/EmailsModule";
 import LayoutStorageModule from "./modules/app/LayoutStorageModule";
@@ -25,6 +26,7 @@ export default new Vuex.Store({
   modules: {
     AppModule,
     Auth,
+    AccountModule,
     NotificationModule,
     Emails,
     LayoutStorageModule,
