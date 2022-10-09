@@ -22,17 +22,18 @@ const actions = {
   /* ======= CREATE ======= */
   createAccount({ commit, dispatch }, credentials) {
     return api
-      .post("/rest-auth/account/create", {
+      .post("/auth-user/account/create", {
         first_name: credentials.first_name,
         last_name: credentials.last_name,
         email: credentials.email,
         password: credentials.password,
+        project: "arumly",
 
         returnSecureToken: true,
       })
       .then((res) => {
         commit("SET_AUTH_TOKEN", { token: res.data.token });
-        router.push({ name: "account-sections" });
+        router.push({ name: "home" });
         dispatch("reloadApp");
       })
       .catch((error) => {
@@ -52,7 +53,7 @@ const actions = {
 
   login({ commit, dispatch }, authData) {
     api
-      .post("/rest-auth/login/", {
+      .post("/auth-user/login/", {
         email: authData.email,
         password: authData.password,
         returnSecureToken: true,
@@ -67,7 +68,7 @@ const actions = {
         localStorage.setItem("exp", exp);
 
         dispatch("loginTrigger");
-        router.push(router.app.$route.query.redirect || { name: "my-locker" });
+        router.push(router.app.$route.query.redirect || { name: "home" });
       })
       .catch((error) => {
         const notification = {
@@ -97,7 +98,7 @@ const actions = {
 
     api
       .post(
-        `/rest-auth/${uid}/change_pwd/`,
+        `/auth-user/${uid}/change_pwd/`,
         {
           password: authData.password,
           new_password: authData.new_password,
@@ -130,7 +131,7 @@ const actions = {
 
   async loginTrigger({ commit, dispatch }) {
     try {
-      const { data } = await api.get(`/rest-auth/user/`);
+      const { data } = await api.get(`/auth-user/user/`);
       commit("GET_LOGGED_USER", data);
       dispatch("reloadApp");
     } catch (err) {
@@ -150,7 +151,7 @@ const actions = {
     ).refresh_token;
 
     api
-      .get(`/rest-auth/${email}/refresh-the-token/${refreshToken}`, {
+      .get(`/auth-user/${email}/refresh-the-token/${refreshToken}`, {
         returnSecureToken: true,
       })
       .then((res) => {

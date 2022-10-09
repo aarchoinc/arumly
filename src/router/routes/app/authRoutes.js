@@ -7,7 +7,7 @@ import Signup from "@/Apps/App/views/Signup.vue";
 export default [
   // { path: "*", redirect: "/" },
   {
-    path: "/login/u/0",
+    path: "/login",
     name: "login",
     components: {
       default: Login,
@@ -15,7 +15,7 @@ export default [
     },
   },
   {
-    path: "/signup/u/0",
+    path: "/signup",
     name: "signup",
     components: {
       default: Signup,

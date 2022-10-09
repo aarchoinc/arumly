@@ -22,7 +22,7 @@
       </router-link>
     </div>
 
-    <div class="right-hm">
+    <div class="right-hm" v-if="isAuthenticated">
       <div class="flex flex-aic">
         <div
           class="cart tertiary flex flex-aic mr-18 pointer"
@@ -51,6 +51,10 @@
       <UBMenu v-if="ubMenu" @showUBMenu="ubMenu = !ubMenu" />
     </div>
 
+    <div class="right-hm" v-else>
+      <AuthBadge />
+    </div>
+
     <MobileMenu v-if="hamburgerStatus" />
   </header>
 </template>
@@ -60,6 +64,7 @@ import { mapState, mapActions } from "vuex";
 
 import MobileMenu from "@/Apps/App/views/MobileMenu.vue";
 import UBMenu from "@/Apps/App/layout/badges/UBMenu.vue";
+import AuthBadge from "@/Apps/App/layout/badges/AuthBadge.vue";
 import HeaderNavigation from "@/Apps/App/layout/header/HeaderNavigation.vue";
 
 export default {
@@ -68,6 +73,7 @@ export default {
     MobileMenu,
     UBMenu,
     HeaderNavigation,
+    AuthBadge,
   },
   data() {
     return {

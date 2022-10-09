@@ -30,11 +30,46 @@
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 
 import { mapState } from "vuex";
 
 export default {
+  created() {
+    /* ====== Get Token START ====== */
+    const tokenString = localStorage.getItem("idToken");
+    // if (tokenString) {
+    //   this.$store.commit("SET_AUTH_TOKEN", tokenString);
+    // }
+
+    if (tokenString) {
+      this.$store.dispatch("fetchLoggedInUser");
+    }
+    /* ====== Get Token END ====== */
+
+    /* ====== Refresh The Token START ====== */
+    // const refreshToken = localStorage.getItem("refresh_token");
+    // const now = new Date().toString();
+    // const exp = localStorage.getItem("exp");
+
+    // if (refreshToken && now >= exp) {
+    //   localStorage.removeItem("idToken");
+    //   this.$store.dispatch("refreshTheToken");
+    // }
+    /* ====== Refresh The Token END ====== */
+
+    axios.interceptors.response.use(
+      // insures that no one can trick the auto login method
+      (response) => response,
+      (error) => {
+        if (error.response.status === 401) {
+          this.$store.dispatch("logout");
+        }
+        return Promise.reject(error);
+      }
+    );
+  },
+
   components: {
     // modalModal,
     // NotificationContainer,

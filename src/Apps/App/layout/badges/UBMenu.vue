@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown-menu ptb-10 uppercase" @click="$emit('showUBMenu')">
-    <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
+    <!-- <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
       <div class="fs-1em b">ACCOUNT</div>
-    </router-link>
+    </router-link> -->
 
     <router-link class="route pointer flex flex-aic" :to="{ name: 'cart' }">
       <div class="fs-1em b">
@@ -10,9 +10,13 @@
       </div>
     </router-link>
 
-    <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
+    <div
+      v-if="isAuthenticated"
+      class="logout pointer flex flex-aic"
+      @click="onLogout"
+    >
       <div class="fs-1em b">LOGOUT</div>
-    </router-link>
+    </div>
   </div>
 </template>
 
@@ -29,6 +33,10 @@ export default {
   methods: {
     fetch() {
       this.$store.dispatch("fetchCartItems");
+    },
+
+    onLogout() {
+      this.$store.dispatch("logout");
     },
   },
 
@@ -54,7 +62,8 @@ export default {
   border: 2px solid #000000;
 }
 
-.route {
+.route,
+.logout {
   padding: 12px 0px;
   padding-left: 35px;
   font-size: 1.1em;

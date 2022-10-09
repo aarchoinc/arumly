@@ -49,9 +49,9 @@ export default {
   color: #ffffff;
 }
 .btz.-fill-2 {
-  color: #ffffff;
+  color: #000000;
   background: transparent;
-  border: 2px solid #bcd2ed;
+  border: 2px solid #000000;
 }
 
 .btz.-fill-3 {
