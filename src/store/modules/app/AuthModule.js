@@ -27,12 +27,13 @@ const actions = {
         last_name: credentials.last_name,
         email: credentials.email,
         password: credentials.password,
+        project: "arumly",
 
         returnSecureToken: true,
       })
       .then((res) => {
         commit("SET_AUTH_TOKEN", { token: res.data.token });
-        router.push({ name: "account-sections" });
+        router.push({ name: "home" });
         dispatch("reloadApp");
       })
       .catch((error) => {

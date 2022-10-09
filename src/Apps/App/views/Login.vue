@@ -40,10 +40,10 @@
     </div>
     <!--/.login-form-->
 
-    <!-- <router-link class="align-c mt-20 b" :to="{ name: 'signup' }" tag="div">
+    <router-link class="align-c mt-40 b" :to="{ name: 'signup' }" tag="div">
       Don’t have an account?
-      <a class="quinary poniter b"> Create Account </a>
-    </router-link> -->
+      <a class="b-300 tertiary poniter b fs-p9em"> Create Account </a>
+    </router-link>
   </main>
 </template>
 
@@ -111,18 +111,6 @@ input {
   font-size: 14px;
   color: #2b323b;
   background: #ffffff;
-}
-.pwd-reset {
-  input {
-    padding: 15px;
-    background-color: #f1f1f1;
-    border: 1px solid #cccccc;
-  }
-
-  ::placeholder {
-    font-weight: 300;
-    font-size: 12px;
-  }
 }
 
 ::placeholder {

@@ -1,8 +1,8 @@
 <template>
   <div class="dropdown-menu ptb-10 uppercase" @click="$emit('showUBMenu')">
-    <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
+    <!-- <router-link class="route pointer flex flex-aic" :to="{ name: '' }">
       <div class="fs-1em b">ACCOUNT</div>
-    </router-link>
+    </router-link> -->
 
     <router-link class="route pointer flex flex-aic" :to="{ name: 'cart' }">
       <div class="fs-1em b">
